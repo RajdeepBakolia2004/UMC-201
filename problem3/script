@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Ask for the input file name
+read -p "Enter the input file name (e.g., input.txt): " input_file
+
+# Array of Python files to execute
+python_files=("heap.py" "naive.py" "ayush.py" "linear.py" "recursive.py")
+
+# Loop through each Python file
+for script in "${python_files[@]}"
+do
+    echo "Running $script 5 times..."
+    
+    # Execute the script 5 times
+    for i in {1..5}
+    do
+        python3 $script $input_file
+    done
+
+    # Introduce a few line spaces before the next execution
+    echo -e "\n\n"
+done
+

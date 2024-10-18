@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Prompt for the input file name
+echo "Enter the input file name (e.g., input.txt):"
+read input_file
+
+# Array of Python files to be executed
+python_files=("heap.py" "naive.py" "ayush.py" "linear.py" "recursive.py")
+
+# Loop through each Python file and execute it
+for file in "${python_files[@]}"; do
+    echo "Running $file with $input_file:"
+    python3 "$file" "$input_file"
+    
+    # Print a blank line to separate outputs
+    echo
+done

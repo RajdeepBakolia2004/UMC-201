@@ -1,0 +1,7 @@
+CC = g++
+CFLAGS = -shared -fPIC -O3
+all : UltraLargeNumber.so
+UltraLargeNumber.so : CountPairs.cpp UltraLargeNumber.h 
+	$(CC) $(CFLAGS) -o UltraLargeNumber.so CountPairs.cpp
+clean :
+	rm -f UltraLargeNumber.so
