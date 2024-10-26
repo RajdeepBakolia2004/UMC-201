@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 long long IC1(long long *arr, long long n);
@@ -54,6 +53,11 @@ long long IC1(long long *arr, long long n){
  * @param n The length of the array.
  */
 
+/**
+ * @brief Sorts an array using the merge sort algorithm.
+ * @param arr The array to sort.
+ * @param n The length of the array.
+ */
 void merge_sort(long long *arr, long long n){
     if(n == 1){
         return;
@@ -92,11 +96,4 @@ void merge_sort(long long *arr, long long n){
     }
     free(B);
     free(C);
-}
-
-int main(){
-    long long arr[] = {1, 20, 6, 4, 5, 65, 10, 8, 9, 11};
-    long long n = sizeof(arr) / sizeof(arr[0]);
-    printf("%lld\n", IC1(arr, n));
-    return 0;
 }

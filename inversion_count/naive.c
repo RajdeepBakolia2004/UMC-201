@@ -1,4 +1,4 @@
-#include <stdio.h>
+
 
 /**
  * Calculate the number of inversions in a given array using the naive
@@ -21,9 +21,3 @@ long long naive_inversion(long long *arr, long long n) {
     return inv;
 }
 
-int main() {
-    long long arr[] = {1, 20, 6, 4, 5, 65};
-    long long n = sizeof(arr) / sizeof(arr[0]);
-    printf("%lld\n", naive_inversion(arr, n));
-    return 0;
-}

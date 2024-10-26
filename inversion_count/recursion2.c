@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 long long IC2(long long *arr, long long n);
@@ -45,12 +44,4 @@ long long IC2(long long *arr, long long n){
     free(B);
     free(C);
     return I1 + I2 + I3;
-}
-
-int main() {
-    long long arr[] = {1, 20, 6, 4, 5, 65, 10, 8, 9, 11};
-    //long long arr[] = {1, 20, 6, 4, 5, 65};
-    long long n = sizeof(arr) / sizeof(arr[0]);
-    printf("%lld\n", IC2(arr, n));
-    return 0;
 }
